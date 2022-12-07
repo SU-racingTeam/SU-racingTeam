@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Join Us</title>
+  </head>
+  <body>
+    <form action="https://sheetdb.io/api/v1/55wkyrmky3qoh" class="form" method="post" id="sheetdb-form">
+      <h1 class="text-center">JOIN US</h1>
+      <!-- Progress bar -->
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        
+        <div
+          class="progress-step progress-step-active"
+          data-title="intro"
+        ></div>
+        <div class="progress-step" data-title="personal"></div>
+        <div class="progress-step" data-title="Contact"></div>
+        <div class="progress-step" data-title="Committee"></div>
+        <div class="progress-step" data-title="Finish"></div>
+      </div>
+
+      <!-- Steps -->
+      <div class="form-step form-step-active">
+        <h3>Please, read the following very carefully.</h3>
+            <h4>Application filling tips:</h4>
+            
+            <ul>
+                <ol>1- Read the questions very carefully, think about them, then type your answer.</ol>
+                <br>
+                <ol>2- Make sure your answer is clear as possible as you can.</ol>
+                <br>
+                <ol>3- Take all the time you need to answer the questions, your answers represent you!</ol>
+                <br>
+                <ol>4- Follow your Email, please.</ol>
+            </ul>
+            <h4>
+            For any inquiries, do not hesitate to contact us on:
+            <a href="mailto:suracingteamsc@gmail.com">suracingteamsc@gmail.com</a>
+            </h4>
+            
+            Thanks in advance!
+        <div class="">
+            <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+          </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for="username">Full Name *</label>
+          <input type="text" name="FullName" id="username" required/>
+        </div>
+        <div class="input-group">
+          <label for="position">Email Address *</label>
+          <input type="email" name="EmailAddress" id="position" required/>
+        </div>
+        <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <a href="#" class="btn btn-next">Next</a>
+          </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for="phone">Phone *</label>
+          <input type="text" name="phone" id="phone" required/>
+        </div>
+        <div class="input-group">
+          <label for="email">Facebook Account *</label>
+          <input type="url" name="FacebookAccount" id="email" required/>
+        </div>
+        <div class="input-group">
+          <label for="email">Linkedin Account</label>
+          <input type="url" name="LinkedinAccount" id="email"/>
+        </div>
+        <div class="input-group">
+          <label for="email">Twitter Account</label>
+          <input type="url" name="TwitterAccount" id="email"/>
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for="dob">Committee *</label>
+          <!-- <input type="text" name="Committee" id="dob" required/> -->
+          <select name="Committee" id="dob">
+            <option value=""></option>
+            <option value="HRM">HRM</option>
+            <option value="HRD">HRD</option>
+            <option value="PR">PR</option>
+            <option value="OC">OC</option>
+            <option value="EVER">EVER</option>
+            <option value="UAV">UAV</option>
+            <option value="ROV">ROV</option>
+            <option value="WEB">WEB</option>
+            <option value="Multi Media">Multi Media</option>
+            <option value="Social Media">Social Media</option>
+        </select>
+        </div>
+        <div class="input-group">
+          <label for="ID">Why you choose this committee ? *</label>
+          <input type="text" name="Why" id="ID" required/>
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for="password">Are you from the previous season ? [Yes | No]</label>
+          <input type="text" name="previousSeason" id="password" required/>
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </div>
+    </form>
+
+    <script>
+
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            alert("Thank You For Join Our SU Team ")
+
+          });
+        });
+
+    </script>
+  </body>
+</html>
