@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Join Us</title>
   </head>
   <body>
-    <form action="https://sheetdb.io/api/v1/55wkyrmky3qoh" class="form" method="post" id="sheetdb-form">
+    <form action="https://sheetdb.io/api/v1/55wkyrmky3qoh" class="form" method="post" id="sheetdb-form" name="join-us">
       <h1 class="text-center">JOIN US</h1>
       <!-- Progress bar -->
       <div class="progressbar">
@@ -41,22 +44,22 @@
             </ul>
             <h4>
             For any inquiries, do not hesitate to contact us on:
-            <a href="mailto:surt.help@gmail.com">surt.help@gmail.com</a>
+            <a href="mailto:suracingteamsc@gmail.com">suracingteamsc@gmail.com</a>
             </h4>
             
             Thanks in advance!
         <div class="">
-            <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+            <a href="#" class="btn btn-next1 width-50 ml-auto">Next</a>
           </div>
       </div>
       <div class="form-step">
         <div class="input-group">
           <label for="username">Full Name *</label>
-          <input type="text" name="FullName" id="username" required/>
+          <input type="text" class="input" name="FullName" id="username" required/>
         </div>
         <div class="input-group">
           <label for="position">Email Address *</label>
-          <input type="email" name="EmailAddress" id="position" required/>
+          <input type="email" class="input" name="EmailAddress" id="email" required/>
         </div>
         <div class="btns-group">
             <a href="#" class="btn btn-prev">Previous</a>
@@ -66,30 +69,30 @@
       <div class="form-step">
         <div class="input-group">
           <label for="phone">Phone *</label>
-          <input type="text" name="phone" id="phone" required/>
+          <input type="text" class="user" name="phone" id="phone" required/>
         </div>
         <div class="input-group">
           <label for="email">Facebook Account *</label>
-          <input type="url" name="FacebookAccount" id="email" required/>
+          <input type="url" class="user" name="FacebookAccount" id="fb" required/>
         </div>
         <div class="input-group">
           <label for="email">Linkedin Account</label>
-          <input type="url" name="LinkedinAccount" id="email"/>
+          <input type="url" class="user" name="LinkedinAccount" id="linked"/>
         </div>
         <div class="input-group">
           <label for="email">Twitter Account</label>
-          <input type="url" name="TwitterAccount" id="email"/>
+          <input type="url" class="user" name="TwitterAccount" id="tw"/>
         </div>
         <div class="btns-group">
           <a href="#" class="btn btn-prev">Previous</a>
-          <a href="#" class="btn btn-next">Next</a>
+          <a href="#" class="btn btn-next2">Next</a>
         </div>
       </div>
       <div class="form-step">
         <div class="input-group">
           <label for="dob">Committee *</label>
           <!-- <input type="text" name="Committee" id="dob" required/> -->
-          <select name="Committee" id="dob">
+          <select name="Committee" class="user1" id="committee">
             <option value=""></option>
             <option value="HRM">HRM</option>
             <option value="HRD">HRD</option>
@@ -105,21 +108,21 @@
         </div>
         <div class="input-group">
           <label for="ID">Why you choose this committee ? *</label>
-          <input type="text" name="Why" id="ID" required/>
+          <input type="text" class="user1" name="Why" id="why" required/>
         </div>
         <div class="btns-group">
           <a href="#" class="btn btn-prev">Previous</a>
-          <a href="#" class="btn btn-next">Next</a>
+          <a href="#" class="btn btn-next3">Next</a>
         </div>
       </div>
       <div class="form-step">
         <div class="input-group">
           <label for="password">Are you from the previous season ? [Yes | No]</label>
-          <input type="text" name="previousSeason" id="password" required/>
+          <input type="text" name="previousSeason" id="ps" required/>
         </div>
         <div class="btns-group">
           <a href="#" class="btn btn-prev">Previous</a>
-          <input type="submit" value="Submit" class="btn" />
+          <input type="submit" value="Join US" id="join" class="btn" />
         </div>
       </div>
     </form>
@@ -136,7 +139,13 @@
               response => response.json()
           ).then((html) => {
             // you can put any JS code here
-            alert("Thank You For Join Our SU Team ")
+            swal.fire({
+              title: "Your Submition Sent Successfully",
+              text: "Click ok to refresh the page.",
+              icon: "success"
+            }).then(function (){
+              window.location.href="https://su-racingteam.github.io/SU-racingTeam/";
+            });
 
           });
         });
