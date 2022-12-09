@@ -194,6 +194,14 @@ ul {
       opacity: 0.95;
     }
 
+    .progress-step::after {
+      content: attr(data-title);
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      font-size: 0.55rem;
+      color: #666;
+    }
+
    }
 
    @media only screen 
@@ -217,6 +225,14 @@ ul {
       padding: 1.3rem;
       background-color: white;
       opacity: 0.95;
+    }
+
+    .progress-step::after {
+      content: attr(data-title);
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      font-size: 0.55rem;
+      color: #666;
     }
 
    }
