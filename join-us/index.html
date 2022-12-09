@@ -12,7 +12,7 @@
     <title>Join Us</title>
   </head>
   <body>
-    <form action="https://sheetdb.io/api/v1/55wkyrmky3qoh" class="form" method="post" id="sheetdb-form" name="join-us">
+    <form action="https://sheetdb.io/api/v1/lbaynfx8cqcq3" class="form" method="post" id="sheetdb-form" name="join-us">
       <h1 class="text-center">JOIN US</h1>
       <!-- Progress bar -->
       <div class="progressbar">
@@ -20,17 +20,17 @@
         
         <div
           class="progress-step progress-step-active"
-          data-title="intro"
+          data-title="Intro"
         ></div>
-        <div class="progress-step" data-title="personal"></div>
-        <div class="progress-step" data-title="Contact"></div>
+        <div class="progress-step" data-title="Personal"></div>
+        <div class="progress-step" data-title="Educational"></div>
         <div class="progress-step" data-title="Committee"></div>
         <div class="progress-step" data-title="Finish"></div>
       </div>
 
       <!-- Steps -->
       <div class="form-step form-step-active">
-        <h3>Please, read the following very carefully.</h3>
+        <!-- <h3>Please, read the following very carefully.</h3> -->
             <h4>Application filling tips:</h4>
             
             <ul>
@@ -43,11 +43,10 @@
                 <ol>4- Follow your Email, please.</ol>
             </ul>
             <h4>
-            For any inquiries, do not hesitate to contact us on:
-            <a href="mailto:suracingteamsc@gmail.com">suracingteamsc@gmail.com</a>
+            For any inquiries or help, contact us on:
+            <a href="mailto:surt.help@gmail.com">surt.help@gmail.com</a>
             </h4>
-            
-            Thanks in advance!
+
         <div class="">
             <a href="#" class="btn btn-next1 width-50 ml-auto">Next</a>
           </div>
@@ -61,6 +60,14 @@
           <label for="position">Email Address *</label>
           <input type="email" class="input" name="EmailAddress" id="email" required/>
         </div>
+        <div class="input-group">
+          <label for="phone">Phone *</label>
+          <input type="number" class="input" name="phone" id="phone" required/>
+        </div>
+        <div class="input-group">
+          <label for="email">Facebook Account URL *</label>
+          <input type="url" class="input" name="FacebookAccount" id="fb" required/>
+        </div>
         <div class="btns-group">
             <a href="#" class="btn btn-prev">Previous</a>
             <a href="#" class="btn btn-next">Next</a>
@@ -68,20 +75,12 @@
       </div>
       <div class="form-step">
         <div class="input-group">
-          <label for="phone">Phone *</label>
-          <input type="text" class="user" name="phone" id="phone" required/>
+          <label for="phone">University *</label>
+          <input type="text" class="user" name="University" id="uni" required/>
         </div>
         <div class="input-group">
-          <label for="email">Facebook Account *</label>
-          <input type="url" class="user" name="FacebookAccount" id="fb" required/>
-        </div>
-        <div class="input-group">
-          <label for="email">Linkedin Account</label>
-          <input type="url" class="user" name="LinkedinAccount" id="linked"/>
-        </div>
-        <div class="input-group">
-          <label for="email">Twitter Account</label>
-          <input type="url" class="user" name="TwitterAccount" id="tw"/>
+          <label for="email">College *</label>
+          <input type="text" class="user" name="College" id="college" required/>
         </div>
         <div class="btns-group">
           <a href="#" class="btn btn-prev">Previous</a>
@@ -93,12 +92,12 @@
           <label for="dob">Committee *</label>
           <!-- <input type="text" name="Committee" id="dob" required/> -->
           <select name="Committee" class="user1" id="committee">
-            <option value=""></option>
+            <option value="">-----------------------------------</option>
             <option value="HRM">HRM</option>
             <option value="HRD">HRD</option>
             <option value="PR">PR</option>
             <option value="OC">OC</option>
-            <option value="EVER">EVER</option>
+            <option value="Entrepreneurship">Entrepreneurship</option>
             <option value="UAV">UAV</option>
             <option value="ROV">ROV</option>
             <option value="WEB">WEB</option>
@@ -108,7 +107,7 @@
         </div>
         <div class="input-group">
           <label for="ID">Why you choose this committee ? *</label>
-          <input type="text" class="user1" name="Why" id="why" required/>
+          <input type="text" class="user1" name="WhyThisCommittee" id="WhyThisCommittee" required/>
         </div>
         <div class="btns-group">
           <a href="#" class="btn btn-prev">Previous</a>
@@ -117,8 +116,12 @@
       </div>
       <div class="form-step">
         <div class="input-group">
-          <label for="password">Are you from the previous season ? [Yes | No]</label>
-          <input type="text" name="previousSeason" id="ps" required/>
+          <label for="password">Are you from the previous season ?</label>
+          <select name="previousSeason" id="ps" required>
+            <option value="">-----------------------------------</option>
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+          </select>
         </div>
         <div class="btns-group">
           <a href="#" class="btn btn-prev">Previous</a>

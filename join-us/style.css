@@ -14,7 +14,10 @@
     display: grid;
     place-items: center;
     min-height: 100vh;
-    background-image: linear-gradient(to right, #3A0595 , #B300FF);
+    /* background-image: linear-gradient(to right, #3A0595 , #B300FF); */
+    background-image: url(cover\ FORM.jpg);
+    background-position: center;
+    background-size: cover;
   }
   /* Global Stylings */ 
   label {
@@ -23,6 +26,14 @@
   }
   
   input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+
+  select {
     display: block;
     width: 100%;
     padding: 0.75rem;
@@ -96,6 +107,11 @@
     background-color: var(--primary-color);
     color: #f3f3f3;
   }
+
+ul {
+
+    margin-left: -50px;
+  }
   
   /* Form */
   .form {
@@ -103,9 +119,10 @@
     margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1.3rem;
     background-color: white;
     opacity: 0.95;
+    margin-left: 880px;
   }
   
   .form-step {
@@ -154,3 +171,52 @@
   .btn:hover {
     box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
   }
+
+  @media only screen 
+   and (max-width : 720px) 
+   and (max-height : 1280px) {
+
+    body {
+
+      background-image: url(mobile\ cover.jpg);
+      background-position: center;
+      background-size: cover;
+      overflow-x: hidden;
+    }
+
+    .form {
+      width: clamp(320px, 30%, 430px);
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      padding: 1.3rem;
+      background-color: white;
+      opacity: 0.95;
+    }
+
+   }
+
+   @media only screen 
+   and (max-width : 1024px) 
+   and (max-height : 1280px) {
+
+    body {
+
+      background-image: url(ipad\ cover.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow-x: hidden;
+    }
+
+    .form {
+      width: clamp(320px, 30%, 430px);
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      padding: 1.3rem;
+      background-color: white;
+      opacity: 0.95;
+    }
+
+   }
